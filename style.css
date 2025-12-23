@@ -1,0 +1,169 @@
+/* ===== Flutter Theme Variables ===== */
+:root {
+  --bg-color: #0a0e17;       /* Dark Blue/Black Background */
+  --card-bg: #131a26;        /* Slightly lighter for cards */
+  --primary: #4FC3F7;        /* Flutter Light Blue */
+  --accent: #02569B;         /* Flutter Dark Blue */
+  --text-main: #ffffff;
+  --text-muted: #b0bec5;
+  --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+  --font-main: 'Outfit', sans-serif;
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background Glow (Blueish) */
+.glow-bg {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(79, 195, 247, 0.1), transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(2, 86, 155, 0.1), transparent 60%);
+  z-index: -1; pointer-events: none;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Typography ===== */
+h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+.gradient-text {
+  background: var(--gradient); -webkit-background-clip: text;
+  background-clip: text; color: transparent;
+}
+.section-title { font-size: 2.5rem; margin-bottom: 40px; }
+.center-title { text-align: center; }
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed; top: 0; width: 100%; padding: 20px 0; z-index: 1000;
+  background: rgba(10, 14, 23, 0.9); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(79, 195, 247, 0.1);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+.logo i { color: var(--primary); margin-right: 5px; }
+
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: var(--transition); }
+.nav-link:hover, .nav-link.active { color: var(--primary); }
+.menu-toggle { display: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; }
+
+/* ===== Hero Section ===== */
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
+.badge {
+  display: inline-block; padding: 8px 16px; background: rgba(79, 195, 247, 0.1);
+  color: var(--primary); border-radius: 50px; font-size: 0.9rem; margin-bottom: 20px;
+  border: 1px solid rgba(79, 195, 247, 0.3);
+}
+.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 500px; margin-bottom: 30px; }
+
+.hero-btns { display: flex; gap: 20px; }
+.btn {
+  padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: 600;
+  border: none; cursor: pointer; transition: var(--transition); font-size: 1rem;
+}
+.glow-btn { background: var(--gradient); color: white; box-shadow: 0 4px 15px rgba(2, 86, 155, 0.4); }
+.outline-btn { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+
+/* ===== Skills Grid ===== */
+.skills { padding: 80px 0; }
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px;
+}
+.skill-card {
+  background: var(--card-bg); padding: 25px; border-radius: var(--radius);
+  text-align: center; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition);
+}
+.skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+.skill-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+/* ===== Apps (Projects) ===== */
+.apps { padding: 80px 0; }
+.apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+.app-card {
+  background: var(--card-bg); border-radius: 20px; padding: 25px;
+  display: flex; align-items: flex-start; gap: 20px;
+  border: 1px solid rgba(255,255,255,0.05); transition: var(--transition);
+}
+.app-card:hover { background: rgba(79, 195, 247, 0.05); border-color: var(--primary); }
+
+.app-icon {
+  width: 60px; height: 60px; background: var(--gradient); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;
+  flex-shrink: 0;
+}
+.app-info h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.app-info p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
+.tags span {
+  font-size: 0.75rem; background: rgba(255,255,255,0.1); padding: 3px 8px;
+  border-radius: 4px; color: var(--primary); margin-right: 5px;
+}
+
+/* ===== Contact Form (BIG INPUTS STYLE) ===== */
+.contact { padding: 80px 0; }
+.contact-container { text-align: center; max-width: 600px; margin: 0 auto; }
+
+.app-form { margin-top: 40px; text-align: left; }
+
+.input-group { margin-bottom: 25px; }
+
+/* THE BIG INPUTS YOU ASKED FOR */
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 20px; 
+  background-color: #131a26 !important; 
+  border: 1px solid rgba(79, 195, 247, 0.3) !important;
+  color: white !important;
+  border-radius: 12px;
+  outline: none;
+  font-family: var(--font-main);
+  
+  /* Big Size */
+  font-size: 18px !important; 
+  height: 65px; 
+  transition: all 0.3s ease;
+}
+
+.input-group textarea { height: 180px; resize: none; }
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.2);
+}
+
+.full-width { width: 100%; padding: 18px; font-size: 18px; margin-top: 10px; }
+
+.social-links-row { margin-top: 40px; display: flex; justify-content: center; gap: 20px; }
+.social-links-row a {
+  color: var(--text-muted); font-size: 1.8rem; transition: var(--transition);
+}
+.social-links-row a:hover { color: var(--primary); transform: scale(1.1); }
+
+footer { text-align: center; padding: 40px 0; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 70px; left: 0; width: 100%;
+    background: #0a0e17; flex-direction: column; align-items: center;
+    padding: 30px; display: none; border-bottom: 1px solid rgba(79, 195, 247, 0.2);
+  }
+  .nav-links.active { display: flex; }
+  
+  .hero h1 { font-size: 2.5rem; }
+  .hero-btns { flex-direction: column; }
+  .btn { width: 100%; text-align: center; }
+  .apps-grid { grid-template-columns: 1fr; }
+}

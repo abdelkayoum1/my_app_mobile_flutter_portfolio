@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdou | Flutter Developer</title>
+  
+  <!-- Fonts: 'Outfit' for modern tech look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Effect -->
+  <div class="glow-bg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo"><i class="fab fa-flutter"></i> ABDOU<span class="dot">.</span></a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#apps" class="nav-link">Apps</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="badge">
+        <i class="fas fa-mobile-alt"></i> Cross-Platform Expert
+      </div>
+      <h1>Building Beautiful <br> <span class="gradient-text">Native Apps</span></h1>
+      <p>
+        I am Abdou, a Flutter Developer. I turn ideas into high-performance 
+        iOS & Android applications using a single codebase.
+      </p>
+      <div class="hero-btns">
+        <a href="#apps" class="btn glow-btn"><i class="fab fa-google-play"></i> View Apps</a>
+        <a href="#contact" class="btn outline-btn">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack / Skills -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title center-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-flutter"></i>
+          <h3>Flutter</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-code"></i>
+          <h3>Dart</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-fire"></i>
+          <h3>Firebase</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-cubes"></i>
+          <h3>Bloc / GetX</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-plug"></i>
+          <h3>REST APIs</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-git-alt"></i>
+          <h3>Git</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (Apps) -->
+  <section class="apps" id="apps">
+    <div class="container">
+      <h2 class="section-title">Featured Apps</h2>
+      
+      <div class="apps-grid">
+        <!-- App 1 -->
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="app-info">
+            <h3>E-Shop Mobile</h3>
+            <p>A complete E-commerce app with payment gateway integration.</p>
+            <div class="tags">
+              <span>Flutter</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 2 -->
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-comments"></i></div>
+          <div class="app-info">
+            <h3>Chatty</h3>
+            <p>Real-time messaging app with push notifications.</p>
+            <div class="tags">
+              <span>Dart</span><span>Socket.io</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 3 -->
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-utensils"></i></div>
+          <div class="app-info">
+            <h3>Food Delivery</h3>
+            <p>UI kit and logic for a food delivery service with maps.</p>
+            <div class="tags">
+              <span>Google Maps</span><span>GetX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container contact-container">
+      <div class="contact-header">
+        <h2 class="section-title">Let's Build Your App</h2>
+        <p>Ready to launch on App Store & Play Store?</p>
+      </div>
+
+      <form class="app-form" id="contactForm">
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <textarea id="message" placeholder="Tell me about your App idea..." required></textarea>
+        </div>
+        <button type="submit" class="btn glow-btn full-width">Send Request</button>
+        <p id="formMessage"></p>
+      </form>
+
+      <div class="social-links-row">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Abdou. Flutter & Dart Developer.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
