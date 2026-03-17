@@ -76,13 +76,13 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 /* ===== Skills Grid ===== */
 .skills { padding: 80px 0; }
 .skills-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 30px;
 }
 .skill-card {
   background: var(--card-bg); padding: 25px; border-radius: var(--radius);
   text-align: center; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition);
 }
-.skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20; }
+.skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
 .skill-card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
 /* ===== Apps (Projects) ===== */
