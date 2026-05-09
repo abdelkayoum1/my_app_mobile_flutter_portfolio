@@ -181,20 +181,7 @@ transition: .5s;
 footer { text-align: center; padding: 40px 0; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
 
 /* ===== Mobile Responsive ===== */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-  .nav-links {
-    position: absolute; top: 70px; left: 0; width: 100%;
-    background: #0a0e17; flex-direction: row; align-items: center;
-    padding: 30px; display: none; border-bottom: 1px solid rgba(79, 195, 247, 0.2);
-  }
-  .nav-links.active { display: flex; }
-  
-  .hero h1 { font-size: 2.5rem; }
-  .hero-btns { flex-direction: column; }
-  .btn { width: 100%; text-align: center; }
-  .apps-grid { grid-template-columns: 1fr; }
-}
+
 /* ===== FIND ME ===== */
 .find-me {
   padding: 80px 20px;
@@ -401,7 +388,7 @@ footer { text-align: center; padding: 40px 0; color: var(--text-muted); border-t
   gap: 30px;
 }
 
-.nav-link {
+.nav-links {
   position: relative;
   color: #cfcfcf;
   font-size: 16px;
