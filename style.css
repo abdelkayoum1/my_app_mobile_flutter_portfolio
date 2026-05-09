@@ -43,7 +43,7 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 
 /* ===== Navbar ===== */
 .navbar {
-  position: fixed; top: 0; width: 100%; padding: 20px 0; z-index: 1000;
+  position: fixed; top: 1; width: 100%; padding: 20px 0; z-index: 1000;
   background: rgba(10, 14, 23, 0.9); backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(79, 195, 247, 0.1);
 }
@@ -78,6 +78,34 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 .skills-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 30px;
 }
+
+.navbar  div ul li a{
+
+  color: white;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px;
+  border-radius: 3px;
+  transition: .5s;
+  text-decoration: none;
+  
+}
+
+.navbar  div ul li a:hover{
+
+  background: red;
+
+  
+}
+
+.navbar  div ul :hover{
+
+transform: translateY(-3px);
+transition: .5s;
+   box-shadow:
+    0 0 0 rgba(0,0,0,0),
+    0 0 10px rgba(0, 255, 255, 0.35);
+}
+
 .skill-card {
   background: var(--card-bg); padding: 25px; border-radius: var(--radius);
   text-align: center; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition);
